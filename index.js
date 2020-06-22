@@ -15,6 +15,12 @@ app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
 });
 
+app.get("/test", (req, res) =>
+  res.send({
+    message: "it's working",
+  })
+);
+
 // //handel unavailable routes
 // app.use((req, res, next) => {
 //   res.status(503).send({
